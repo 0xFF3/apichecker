@@ -34,6 +34,7 @@ try:
         else:
             check_r=requests.get(final_url, verify=False)
             print(check_r.status_code)
+     f.close()       
 except FileNotFoundError:
     print("File not Found!")
     # print(final_url) for testing
