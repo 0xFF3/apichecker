@@ -14,13 +14,10 @@ parser.add_argument("list", help="file with methods to check", action='store')
 parser.add_argument("--user-agent", help="User-Agent header for HTTP requests")
 args=parser.parse_args()
 
-# For testing :)
-# print(args.url)
-# print(args.prefix)
 
 #preparing the URL
 url=args.url+"/"+args.prefix+"/"
-# print(final_url) for testing :)
+
 
 #Check existing file and build final URL. After that making request for check methods from list
 try:
@@ -37,4 +34,3 @@ try:
      f.close()       
 except FileNotFoundError:
     print("File not Found!")
-    # print(final_url) for testing
